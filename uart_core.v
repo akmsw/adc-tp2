@@ -7,8 +7,7 @@ module uart
                 DVSR = 163,   // baud rate divisor
                               // DVSR = 50M/(16*baud rate)
                 DVSR_BIT = 8, // # bits of DVSR
-                FIFO_W = 4    // # addr bits of FIFO
-                              // # words in FIFO=2^FIFO_W
+                FIFO_W = 2   
    )
    (
     input wire clk, reset,
