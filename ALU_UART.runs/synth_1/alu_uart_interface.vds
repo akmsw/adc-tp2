@@ -1,0 +1,347 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jul  4 17:34:32 2023
+# Process ID: 6824
+# Current directory: C:/Users/lihue/project_7/project_7.runs/synth_1
+# Command line: vivado.exe -log alu_uart_interface.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu_uart_interface.tcl
+# Log file: C:/Users/lihue/project_7/project_7.runs/synth_1/alu_uart_interface.vds
+# Journal file: C:/Users/lihue/project_7/project_7.runs/synth_1\vivado.jou
+# Running On: LiweX-PC, OS: Windows, CPU Frequency: 4008 MHz, CPU Physical cores: 4, Host memory: 17129 MB
+#-----------------------------------------------------------
+source alu_uart_interface.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/lihue/project_7/project_7.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/lihue/project_7/project_7.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top alu_uart_interface -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19332
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'alu_uart_interface' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Downloads/adc-tp2-main/alu_uart_interface.v:76]
+INFO: [Synth 8-6157] synthesizing module 'uart' [D:/Downloads/adc-tp2-main/uart_core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'baud_rate_generator' [D:/Downloads/adc-tp2-main/baud_rate_generator.v:1]
+	Parameter N bound to: 8 - type: integer 
+	Parameter M bound to: 163 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'baud_rate_generator' (0#1) [D:/Downloads/adc-tp2-main/baud_rate_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [D:/Downloads/adc-tp2-main/uart_rx.v:1]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [D:/Downloads/adc-tp2-main/uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [D:/Downloads/adc-tp2-main/fifo_buffer.v:1]
+	Parameter B bound to: 8 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Downloads/adc-tp2-main/fifo_buffer.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (0#1) [D:/Downloads/adc-tp2-main/fifo_buffer.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [D:/Downloads/adc-tp2-main/uart_tx.v:1]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [D:/Downloads/adc-tp2-main/uart_tx.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'uart' (0#1) [D:/Downloads/adc-tp2-main/uart_core.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/Downloads/adc-tp2-main/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [D:/Downloads/adc-tp2-main/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu_uart_interface' (0#1) [D:/Downloads/adc-tp2-main/alu_uart_interface.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1293.613 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1293.613 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc]
+Finished Parsing XDC File [C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/alu_uart_interface_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/alu_uart_interface_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1321.328 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'alu_uart_interface'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               10
+                    stop |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+WARNING: [Synth 8-327] inferring latch for variable 'tx_data_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:93]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_next_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:81]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_state_next_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:81]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   DATOA |                              001 |                               01
+                   DATOB |                              010 |                               10
+                  OPCODE |                              100 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'one-hot' in module 'alu_uart_interface'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_state_next_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:81]
+WARNING: [Synth 8-327] inferring latch for variable 'rd_signal_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:79]
+WARNING: [Synth 8-327] inferring latch for variable 'wr_signal_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:95]
+WARNING: [Synth 8-327] inferring latch for variable 'value_a_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:80]
+WARNING: [Synth 8-327] inferring latch for variable 'value_b_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:86]
+WARNING: [Synth 8-327] inferring latch for variable 'opcode_reg' [D:/Downloads/adc-tp2-main/alu_uart_interface.v:92]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 4     
++---XORs : 
+	   2 Input      9 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	               32 Bit	(4 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 15    
+	   4 Input    1 Bit        Muxes := 23    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object                               | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+|alu_uart_interface | uart_instance/fifo_rx_unit/array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
+|alu_uart_interface | uart_instance/fifo_tx_unit/array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object                               | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+|alu_uart_interface | uart_instance/fifo_rx_unit/array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
+|alu_uart_interface | uart_instance/fifo_tx_unit/array_reg_reg | Implied   | 4 x 8                | RAM32M x 2  | 
++-------------------+------------------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |     6|
+|3     |LUT2     |    25|
+|4     |LUT3     |    20|
+|5     |LUT4     |    23|
+|6     |LUT5     |    25|
+|7     |LUT6     |    43|
+|8     |RAM32M   |     2|
+|9     |RAM32X1D |     4|
+|10    |FDRE     |    54|
+|11    |FDSE     |     4|
+|12    |LD       |    35|
+|13    |LDC      |     2|
+|14    |IBUF     |     3|
+|15    |OBUF     |    11|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1321.328 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1321.328 ; gain = 27.715
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1321.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 43 instances were transformed.
+  LD => LDCE: 35 instances
+  LDC => LDCE: 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: da4af54f
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1321.328 ; gain = 27.715
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lihue/project_7/project_7.runs/synth_1/alu_uart_interface.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file alu_uart_interface_utilization_synth.rpt -pb alu_uart_interface_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  4 17:35:11 2023...
