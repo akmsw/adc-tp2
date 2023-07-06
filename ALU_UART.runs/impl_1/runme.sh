@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/lihue/project_7/project_7.runs/impl_1'
+HD_PWD='D:/Repos/fpgaALU_UART/ALU_UART.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

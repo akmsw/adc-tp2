@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/lihue/project_7/project_7.runs/impl_1/alu_uart_interface.tcl"
+  variable script "D:/Repos/fpgaALU_UART/ALU_UART.runs/impl_1/alu_uart_interface.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,7 +123,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property board_part_repo_paths {C:/Users/lihue/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store} [current_project]
@@ -132,15 +131,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/lihue/project_7/project_7.cache/wt [current_project]
-  set_property parent.project_path C:/Users/lihue/project_7/project_7.xpr [current_project]
-  set_property ip_output_repo C:/Users/lihue/project_7/project_7.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Repos/fpgaALU_UART/ALU_UART.cache/wt [current_project]
+  set_property parent.project_path D:/Repos/fpgaALU_UART/ALU_UART.xpr [current_project]
+  set_property ip_output_repo D:/Repos/fpgaALU_UART/ALU_UART.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/lihue/project_7/project_7.runs/synth_1/alu_uart_interface.dcp
+  add_files -quiet D:/Repos/fpgaALU_UART/ALU_UART.runs/synth_1/alu_uart_interface.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc
+  read_xdc D:/Repos/fpgaALU_UART/ALU_UART.srcs/constrs_1/new/constr.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

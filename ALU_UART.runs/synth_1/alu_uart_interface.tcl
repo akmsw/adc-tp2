@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/lihue/project_7/project_7.runs/synth_1/alu_uart_interface.tcl"
+  variable script "D:/Repos/fpgaALU_UART/ALU_UART.runs/synth_1/alu_uart_interface.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,32 +70,30 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/lihue/project_7/project_7.cache/wt [current_project]
-set_property parent.project_path C:/Users/lihue/project_7/project_7.xpr [current_project]
+set_property webtalk.parent_dir D:/Repos/fpgaALU_UART/ALU_UART.cache/wt [current_project]
+set_property parent.project_path D:/Repos/fpgaALU_UART/ALU_UART.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part_repo_paths {C:/Users/lihue/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/lihue/project_7/project_7.cache/ip [current_project]
+set_property ip_output_repo d:/Repos/fpgaALU_UART/ALU_UART.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  D:/Downloads/adc-tp2-main/alu.v
-  D:/Downloads/adc-tp2-main/baud_rate_generator.v
-  D:/Downloads/adc-tp2-main/fifo_buffer.v
-  D:/Downloads/adc-tp2-main/uart_core.v
-  D:/Downloads/adc-tp2-main/uart_rx.v
-  D:/Downloads/adc-tp2-main/uart_tx.v
-  D:/Downloads/adc-tp2-main/alu_uart_interface.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/alu.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/baud_rate_generator.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/fifo_buffer.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/uart_core.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/uart_rx.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/uart_tx.v
+  D:/Repos/fpgaALU_UART/ALU_UART.srcs/sources_1/imports/adc-tp2-main/alu_uart_interface.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -106,12 +104,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc
-set_property used_in_implementation false [get_files C:/Users/lihue/project_7/project_7.srcs/constrs_1/new/constr.xdc]
+read_xdc D:/Repos/fpgaALU_UART/ALU_UART.srcs/constrs_1/new/constr.xdc
+set_property used_in_implementation false [get_files D:/Repos/fpgaALU_UART/ALU_UART.srcs/constrs_1/new/constr.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/lihue/project_7/project_7.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/lihue/ALU_UART/ALU_UART.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

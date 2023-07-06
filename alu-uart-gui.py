@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import serial
-import os
 import threading
 import time
 
@@ -34,7 +33,7 @@ class thread(threading.Thread):
                 if (not flags.not_gud):
                     flags.not_gud = True
                 else:
-                    received = int.from_bytes(ser.readline(), byteorder='big')
+                    received = int.from_bytes(ser.readline(), byteorder='big') & 0xFF
                     # receivedHex = f'0x{received:08X}'
                     result_frame.config(text=received)
 
@@ -69,28 +68,26 @@ def send():
             messagebox.showinfo("Problema con los inputs", "Los inputs no pueden ser mayores que 255")
             return
         
-        dato_a_chr = chr(dato_a)
-        dato_b_chr = chr(dato_b)
+        # dato_a_chr = chr(dato_a)
+        # dato_b_chr = chr(dato_b)
         
-        dA = b'\xc8'
-        dB = b'\xc8'
-        dO = b'\x61'
-        dFull = dA + dB + dO
+        dA = dato_a.to_bytes(1,"big")
+        dB = dato_b.to_bytes(1,"big")
+        
 
-        opcode = get_opcode(opcode_list.get())
-
-        print("DATO A: " + str(dato_a_chr))
-        print("DATO B: " + str(dato_b_chr))
-
-        # if (opcode == 'b'):
-        #     ser.write(dB)
-        #     ser.write(dA)
-        # else:
-        #     ser.write(dA)
-        #     ser.write(dB)
+        dO = get_opcode(opcode_list.get())
+        
+        print("DATO A: " + str(dA))
+        print("DATO B: " + str(dB))
+        print("OPCODE: " + str(dO))
+        if (dO == 'b'):
+            dFull = dA + dB + dO
+        else:
+            dFull = dB + dA + dO
         
         # ser.write(dO)
 
+        ser.write(dFull)
         ser.write(dFull)
         
     except serial.SerialException:
@@ -98,14 +95,14 @@ def send():
         return    
 
 def get_opcode(opcode_string):
-    if (opcode_string == "ADD"):   return 'a' # 01100001
-    elif (opcode_string == "SUB"): return 'b' # 01100010
-    elif (opcode_string == "AND"): return 'c' # 01100011
-    elif (opcode_string == "OR"):  return 'd' # 01100100
-    elif (opcode_string == "XOR"): return 'e' # 01100101
-    elif (opcode_string == "NOR"): return 'f' # 01100110
-    elif (opcode_string == "SRL"): return 'g' # 01100111
-    else:                          return 'h' # 01101000
+    if (opcode_string == "ADD"):   return b'\x61' # 01100001
+    elif (opcode_string == "SUB"): return b'\x62' # 01100010
+    elif (opcode_string == "AND"): return b'\x63' # 01100011
+    elif (opcode_string == "OR"):  return b'\x64' # 01100100
+    elif (opcode_string == "XOR"): return b'\x65' # 01100101
+    elif (opcode_string == "NOR"): return b'\x66' # 01100110
+    elif (opcode_string == "SRL"): return b'\x67' # 01100111
+    else:                          return b'\x68' # 01101000
 
 port_label = tk.Label(main_window,text="Puerto:",background="lightgoldenrod")
 port_label.place(x=20, y=15)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1688502870" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/alu_uart_interface.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1688671605" LaunchIncrCheckpoint="C:/Users/lihue/ALU_UART/ALU_UART.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp">
   <File Type="PA-TCL" Name="alu_uart_interface.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="alu_uart_interface_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="alu_uart_interface_reports.tcl"/>
@@ -13,7 +13,7 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/alu.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/alu.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/alu.v"/>
         <Attr Name="ImportTime" Val="1688499869"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -22,7 +22,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/baud_rate_generator.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/baud_rate_generator.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/baud_rate_generator.v"/>
         <Attr Name="ImportTime" Val="1665466662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -31,7 +31,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/fifo_buffer.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/fifo_buffer.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/fifo_buffer.v"/>
         <Attr Name="ImportTime" Val="1665466662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -40,7 +40,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/uart_core.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/uart_core.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/uart_core.v"/>
         <Attr Name="ImportTime" Val="1665466662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -49,7 +49,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/uart_rx.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/uart_rx.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/uart_rx.v"/>
         <Attr Name="ImportTime" Val="1665466662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -58,7 +58,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/uart_tx.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/uart_tx.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/uart_tx.v"/>
         <Attr Name="ImportTime" Val="1665466662"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -67,7 +67,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/adc-tp2-main/alu_uart_interface.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="D:/Downloads/adc-tp2-main/alu_uart_interface.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/adc-tp2-main/alu_uart_interface.v"/>
         <Attr Name="ImportTime" Val="1688502835"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -100,6 +100,14 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../project_7/project_7.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp"/>
         <Attr Name="ImportTime" Val="1688502791"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="C:/Users/lihue/ALU_UART/ALU_UART.srcs/utils_1/imports/synth_1/alu_uart_interface.dcp">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="synth_1"/>
